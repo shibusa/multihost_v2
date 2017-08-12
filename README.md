@@ -12,14 +12,7 @@ Improvements:
 - BASH on local and remote system
 - ssh-key authentication of remote systems for ssh related commands
 
-## First Run
-1. Locate multihost.py file
-2. Make script executable
-```
-chmod +x multihost.py
-```
-
-## Standard use
+## Usage
 1. Determine if commands will be run remotely or locally. If ssh is required, create a host file with an ip or hostname on each line.
 ```
 fqdn.host.io
@@ -50,9 +43,16 @@ All inputs are strings. Replace command variables in command with `{}`. I.E. `pi
 nossh("ping -c {} {}", "commandfile.txt")
 ```
 
-###Script Format
-4. Run script.  Similarly to using imported functions, replace command variables in command with `{}`. I.E. `ping -c {} {}`
+### Command line usage
+#### First run
+1. Locate multihost.py file
+2. Make script executable
+```
+chmod +x multihost.py
+```
+#### Running script
+1. Run script.  Similarly to using imported functions, replace command variables in command with `{}`. I.E. `ping -c {} {}`
 ```
 ./multihost.py
 ```
-5. Check for outputs in output file
+2. Check for outputs in output file
